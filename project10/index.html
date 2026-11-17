@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 10: Advanced Flexbox Header & Footer Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Advanced Flexbox Header -->
+    <header class="adv-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <div class="avatar-pill">AA</div>
+                <div class="brand-text">
+                    <h2>Aarman Arzare</h2>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for Engineering Projects</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="header-nav" aria-label="Main Navigation">
+                <a href="#overview" class="nav-item active">Overview</a>
+                <a href="#flexbox-features" class="nav-item">Flexbox Features</a>
+                <a href="#architecture" class="nav-item">Architecture</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://github.com/aarmanarzare" target="_blank" rel="noopener" class="btn-outline">GitHub</a>
+                <a href="#contact" class="btn-solid">Hire / Connect</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-body">
+        <section class="content-hero" id="overview">
+            <span class="kicker">Module 3 &bull; Practical 10</span>
+            <h1>Advanced Flexbox Header & Multi-Column Footer Architecture</h1>
+            <p>Demonstrating deep mastery of Flexbox layout algorithms: <code>flex-grow</code>, <code>flex-shrink</code>, <code>flex-basis</code>, source ordering via <code>order</code>, nested flex hierarchies, and multi-axis alignment.</p>
+        </section>
+
+        <section class="features-grid" id="flexbox-features">
+            <article class="feature-card">
+                <div class="feature-icon">&#9878;</div>
+                <h3>Nested Flex Containers</h3>
+                <p>The header employs compound flex containers: the outer bar balances brand, links, and actions, while internal units manage badges and buttons with precise alignment.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">&#128260;</div>
+                <h3>Flex Ratios (Grow & Shrink)</h3>
+                <p>The multi-column footer distributes available horizontal real estate proportional to content density, assigning higher <code>flex-grow</code> to brand context and fixed basis to navigation.</p>
+            </article>
+
+            <article class="feature-card">
+                <div class="feature-icon">&#128257;</div>
+                <h3>Responsive Source Ordering</h3>
+                <p>Using the CSS <code>order</code> property, critical call-to-action components re-position seamlessly on smaller mobile viewports without altering semantic HTML document flow.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="adv-footer" id="contact">
+        <div class="footer-inner">
+            
+            <div class="footer-col col-brand">
+                <div class="footer-logo">
+                    <span class="logo-box">&lt;AA /&gt;</span>
+                    <h3>Aarman Arzare</h3>
+                </div>
+                <p class="brand-desc">Computer Science undergraduate crafting modern, resilient web applications through disciplined engineering, semantic structure, and accessible layout systems.</p>
+                <div class="social-links">
+                    <a href="https://github.com/aarmanarzare" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener">Twitter/X</a>
+                    <a href="mailto:aarmanarzare@example.com">Email</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#flexbox-features">Flexbox Features</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#">Resume / CV</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Laboratory Work</h4>
+                <ul class="footer-nav">
+                    <li><a href="../project1/README.md">P1: Terminal Navigation</a></li>
+                    <li><a href="../project5/index.html">P5: Semantic Bio Page</a></li>
+                    <li><a href="../project9/index.html">P9: Responsive Flex Grid</a></li>
+                    <li><a href="../project12/index.html">P12: Advanced CSS Grid</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Academic Details</h4>
+                <div class="academic-badge">
+                    <strong>Course:</strong> Web Development - I<br>
+                    <strong>Term:</strong> Laboratory Practical<br>
+                    <strong>Institution:</strong> Bosscoder Academy
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="bottom-inner">
+                <p>&copy; 2026 Aarman Arzare. All rights reserved.</p>
+                <p class="tech-credit">Engineered with Advanced CSS Flexbox</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

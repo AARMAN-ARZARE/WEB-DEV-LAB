@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 7: Design Tokens & Typography System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="system-container">
+        
+        <header class="system-header">
+            <span class="badge">CSS Architecture</span>
+            <h1>Design Tokens & Typography System</h1>
+            <p class="lead">A standardized design language powered by CSS Custom Properties (`:root` tokens) for scalable, maintainable web interfaces.</p>
+        </header>
+
+        <!-- Color Token Swatches -->
+        <section class="token-section">
+            <div class="section-heading">
+                <h2>1. Color System Tokens</h2>
+                <p>Semantic color palettes mapped to global CSS variables.</p>
+            </div>
+            <div class="swatch-grid">
+                <div class="swatch-card">
+                    <div class="swatch swatch-primary"></div>
+                    <div class="swatch-info">
+                        <strong>--color-primary</strong>
+                        <span>#2563eb</span>
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch swatch-secondary"></div>
+                    <div class="swatch-info">
+                        <strong>--color-secondary</strong>
+                        <span>#0d9488</span>
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch swatch-accent"></div>
+                    <div class="swatch-info">
+                        <strong>--color-accent</strong>
+                        <span>#f59e0b</span>
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch swatch-surface"></div>
+                    <div class="swatch-info">
+                        <strong>--color-surface</strong>
+                        <span>#f8fafc</span>
+                    </div>
+                </div>
+                <div class="swatch-card">
+                    <div class="swatch swatch-dark"></div>
+                    <div class="swatch-info">
+                        <strong>--color-text-main</strong>
+                        <span>#0f172a</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Modular Scale -->
+        <section class="token-section">
+            <div class="section-heading">
+                <h2>2. Typography Scale Specimen</h2>
+                <p>Harmonious typographic hierarchy using modular font sizing, weights, and leading.</p>
+            </div>
+            
+            <div class="typography-specimen">
+                <div class="type-row">
+                    <span class="type-label">H1 (2.5rem / 40px)</span>
+                    <h1 class="specimen-h1">The quick brown fox jumps over the lazy dog</h1>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">H2 (2.0rem / 32px)</span>
+                    <h2 class="specimen-h2">Architecting resilient, component-driven layouts</h2>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">H3 (1.5rem / 24px)</span>
+                    <h3 class="specimen-h3">Semantic elements provide accessibility and clarity</h3>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">H4 (1.25rem / 20px)</span>
+                    <h4 class="specimen-h4">Design tokens bridge design systems and web code</h4>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">Lead Paragraph</span>
+                    <p class="specimen-lead">Modern web engineering requires systematic approaches to spacing, typography scales, and color schemes. Utilizing CSS custom properties allows instant site-wide adaptability.</p>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">Body Text (1.0rem)</span>
+                    <p class="specimen-body">Cascading Style Sheets have evolved into a rich development platform. Through custom properties, developers define declarative variables in <code>:root</code> that propagate across inheritance trees effortlessly.</p>
+                </div>
+                <div class="type-row">
+                    <span class="type-label">Blockquote</span>
+                    <blockquote class="specimen-quote">
+                        "Good design is as little design as possible. Less, but better – because it concentrates on the essential aspects."
+                        <cite>&mdash; Dieter Rams</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Token Implementation Card Demo -->
+        <section class="token-section">
+            <div class="section-heading">
+                <h2>3. Assembled Component Using Tokens</h2>
+                <p>Card UI constructed solely via tokens for borders, padding, colors, and typography.</p>
+            </div>
+            
+            <div class="token-card-demo">
+                <article class="demo-card">
+                    <span class="demo-badge">Design Token Component</span>
+                    <h3 class="demo-title">Maintainable CSS Architecture</h3>
+                    <p class="demo-text">By consolidating magic numbers and arbitrary hex codes into centralized design tokens, your codebase gains maintainability, predictability, and theme flexibility.</p>
+                    <div class="demo-footer">
+                        <button class="demo-btn">Learn More</button>
+                        <span class="demo-meta">Token Version 1.0</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

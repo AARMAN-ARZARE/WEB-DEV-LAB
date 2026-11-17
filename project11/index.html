@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Computing Chronicle - Practical 11 Newspaper Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="newspaper-page">
+
+        <!-- Masthead Header -->
+        <header class="masthead">
+            <div class="masthead-top">
+                <span>Vol. XLVIII &bull; No. 312</span>
+                <span class="edition">INTERNATIONAL TECHNOLOGY EDITION</span>
+                <span>November 17, 2026</span>
+            </div>
+            
+            <h1 class="newspaper-title">THE COMPUTING CHRONICLE</h1>
+            
+            <div class="masthead-bottom">
+                <span>The Independent Journal of Software Engineering & Applied Computing</span>
+                <span class="price">&dollar;2.50</span>
+            </div>
+        </header>
+
+        <!-- Lead Banner Headline -->
+        <section class="lead-banner">
+            <span class="headline-kicker">BREAKTHROUGH IN DISTRIBUTED SYSTEMS</span>
+            <h2 class="main-headline">Next-Generation Consensus Architecture Achieves Global Finality Under 50 Milliseconds</h2>
+            <p class="headline-sub">Researchers synthesize asynchronous Byzantine agreement with hardware cryptographic accelerators, unlocking instantaneous multi-region state synchronization.</p>
+        </section>
+
+        <!-- 3-Column Newspaper CSS Grid -->
+        <main class="newspaper-grid">
+
+            <!-- Column 1 -->
+            <article class="news-column column-one">
+                <span class="column-topic">Software Architecture</span>
+                <h3 class="article-title">The Resurgence of Static Analysis in Modern Web Runtimes</h3>
+                <div class="byline">By <span class="author">Aarman Arzare</span> &bull; Systems Correspondent</div>
+                
+                <p class="dropcap-p">Static typing mechanisms have undergone a remarkable renaissance across cloud application infrastructure. Where dynamic interpretation once dominated rapid development cycles, modern compilation pipelines now enforce mathematical correctness prior to deployment.</p>
+                
+                <p>Engineers report up to forty percent reductions in production crash vectors following migrations to strictly typed schemas. With compiler toolchains now leveraging language server protocols and continuous background checks, developer velocity matches or exceeds legacy interpreted setups.</p>
+                
+                <p>"The shift represents a fundamental maturation of our industry," explains Dr. Elena Rostova. "We no longer debate correctness versus development speed; compiler verification provides both simultaneously."</p>
+
+                <div class="article-divider"></div>
+
+                <h4 class="sub-article-title">Memory Safety Without Garbage Collection</h4>
+                <p>Linear type systems and explicit lifetime tracking continue supplanting runtime garbage collection pauses in latency-sensitive financial and telemetry pipelines.</p>
+            </article>
+
+            <!-- Column 2 -->
+            <article class="news-column column-two">
+                <span class="column-topic">Artificial Intelligence</span>
+                <h3 class="article-title">Autonomous Agents Shift from Pair Programmers to Software Co-Designers</h3>
+                <div class="byline">By <span class="author">Devon Vance</span> &bull; AI Ethics & Architecture</div>
+
+                <p class="dropcap-p">Development teams worldwide are adopting multi-agent orchestration frameworks where autonomous digital agents interact as dedicated engineering specialists. From automated security audit bots to database schema optimizers, software engineering is rapidly transforming into high-level specification governance.</p>
+
+                <blockquote class="pull-quote">
+                    &ldquo;Software development is transitioning from manual line-by-line syntax writing to architectural intent composition and verification.&rdquo;
+                </blockquote>
+
+                <p>These specialized agent swarms communicate via declarative protocol contracts, discovering API surfaces dynamically and generating formal verification suites before any code lands in mainline branches.</p>
+
+                <p>Industry analysts forecast that by the end of this decade, over seventy percent of all production code reviews will be conducted by automated consensus agents cross-referencing formal requirement specifications.</p>
+            </article>
+
+            <!-- Column 3 -->
+            <article class="news-column column-three">
+                <span class="column-topic">Infrastructure & Sustainability</span>
+                <h3 class="article-title">Green Datacenter Initiatives Tackle Global Compute Demands</h3>
+                <div class="byline">By <span class="author">Maya Lin</span> &bull; Cloud Infrastructure</div>
+
+                <p class="dropcap-p">As massive machine learning workloads expand global electrical draw, hyperscale datacenter operators are redesigning thermal dissipation architectures from the ground up. Direct-to-chip liquid cooling and geothermal energy integration are no longer experimental novelties but mandatory infrastructure standards.</p>
+
+                <p>New municipal regulations in major tech hubs now mandate compute efficiency minimums, penalizing inefficient workload allocations and encouraging low-carbon geographic workload migration.</p>
+
+                <p>Cloud providers are responding with carbon-aware job schedulers that dynamically route asynchronous training routines to data centers with current excess solar or wind energy production.</p>
+
+                <div class="infobox">
+                    <h5>Key Energy Benchmarks</h5>
+                    <ul>
+                        <li><strong>PUE Target:</strong> Sub 1.08 across all green facilities</li>
+                        <li><strong>Liquid Cooling:</strong> 85% heat recapture efficiency</li>
+                        <li><strong>Zero-Water:</strong> Closed-loop cooling loops adopted</li>
+                    </ul>
+                </div>
+            </article>
+
+        </main>
+
+        <footer class="newspaper-footer">
+            <div class="footer-rule"></div>
+            <p>&copy; 2026 The Computing Chronicle. Programming for Web Development - I Laboratory (Practical 11: Newspaper 3-Column CSS Grid Layout).</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

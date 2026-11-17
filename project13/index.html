@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 13: Choosing Between Flexbox & Grid for a Shared Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-container">
+
+        <header class="page-header">
+            <span class="header-badge">CSS Architecture Lab</span>
+            <h1>Choosing Between Flexbox & CSS Grid</h1>
+            <p class="subtitle">A side-by-side architectural comparison evaluating 1D content-driven flow versus 2D container-driven layout systems for identical UI components.</p>
+        </header>
+
+        <section class="matrix-section">
+            <div class="section-title">
+                <h2>Architectural Decision Matrix</h2>
+                <p>When to select Flexbox versus CSS Grid in real-world frontend engineering</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Architectural Vector</th>
+                            <th>CSS Flexbox (1D)</th>
+                            <th>CSS Grid (2D)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dimensionality</strong></td>
+                            <td>One-Dimensional (Row OR Column)</td>
+                            <td>Two-Dimensional (Row AND Column simultaneously)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sizing Paradigm</strong></td>
+                            <td><strong>Content-Out:</strong> Items calculate size based on internal text/media</td>
+                            <td><strong>Container-In:</strong> Container defines tracks; items conform to grid cells</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Wrapping Behavior</strong></td>
+                            <td>Orphaned wrapped items expand or center freely</td>
+                            <td>Wrapped items strictly snap to assigned column coordinates</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Element Overlap</strong></td>
+                            <td>Requires external CSS positioning (absolute/relative)</td>
+                            <td>Native overlapping supported via coordinate placement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ideal Applications</strong></td>
+                            <td>Navbars, toolbars, tag lists, button groups, modal footers</td>
+                            <td>Page skeletons, bento boxes, image galleries, complex dashboards</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Implementation 1: The Flexbox Approach -->
+        <section class="demo-section">
+            <div class="demo-header">
+                <div class="demo-badge badge-flex">Flexbox Implementation</div>
+                <h2>1. The Flexbox Approach (1D Content-Driven Flow)</h2>
+                <p>Properties: <code>display: flex; flex-wrap: wrap; gap: 20px;</code> with items having <code>flex: 1 1 260px</code>. Notice how the bottom orphan card stretches fluidly across the remaining width to balance the row.</p>
+            </div>
+
+            <div class="flex-layout-container">
+                <article class="shared-card">
+                    <span class="card-icon">&#128196;</span>
+                    <h3>HTML5 Semantic Engine</h3>
+                    <p>Defines meaningful document structure and accessibility trees. Content drives initial dimensioning.</p>
+                    <span class="layout-note">Flex Item 1</span>
+                </article>
+
+                <article class="shared-card">
+                    <span class="card-icon">&#127912;</span>
+                    <h3>CSS3 Cascade & Tokens</h3>
+                    <p>Controls presentation, custom properties, responsive media queries, and layout mathematics.</p>
+                    <span class="layout-note">Flex Item 2</span>
+                </article>
+
+                <article class="shared-card">
+                    <span class="card-icon">&#9889;</span>
+                    <h3>JavaScript ESNext</h3>
+                    <p>Powers client-side reactivity, asynchronous DOM manipulation, and browser APIs.</p>
+                    <span class="layout-note">Flex Item 3</span>
+                </article>
+
+                <article class="shared-card card-orphan">
+                    <span class="card-icon">&#127760;</span>
+                    <h3>Web APIs & Network Protocols</h3>
+                    <p>Handles fetch cycles, WebSockets, background service workers, and client cache persistence.</p>
+                    <span class="layout-note">Wrapped Item (Expands to fill available row)</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- Implementation 2: The CSS Grid Approach -->
+        <section class="demo-section">
+            <div class="demo-header">
+                <div class="demo-badge badge-grid">CSS Grid Implementation</div>
+                <h2>2. The CSS Grid Approach (2D Container-Driven Alignment)</h2>
+                <p>Properties: <code>display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;</code>. Notice how cards strictly preserve equal column widths, keeping the fourth item locked into column 1 without stretching.</p>
+            </div>
+
+            <div class="grid-layout-container">
+                <article class="shared-card">
+                    <span class="card-icon">&#128196;</span>
+                    <h3>HTML5 Semantic Engine</h3>
+                    <p>Defines meaningful document structure and accessibility trees. Rigid track alignment enforced.</p>
+                    <span class="layout-note">Grid Cell (Row 1, Col 1)</span>
+                </article>
+
+                <article class="shared-card">
+                    <span class="card-icon">&#127912;</span>
+                    <h3>CSS3 Cascade & Tokens</h3>
+                    <p>Controls presentation, custom properties, responsive media queries, and layout mathematics.</p>
+                    <span class="layout-note">Grid Cell (Row 1, Col 2)</span>
+                </article>
+
+                <article class="shared-card">
+                    <span class="card-icon">&#9889;</span>
+                    <h3>JavaScript ESNext</h3>
+                    <p>Powers client-side reactivity, asynchronous DOM manipulation, and browser APIs.</p>
+                    <span class="layout-note">Grid Cell (Row 1, Col 3)</span>
+                </article>
+
+                <article class="shared-card">
+                    <span class="card-icon">&#127760;</span>
+                    <h3>Web APIs & Network Protocols</h3>
+                    <p>Handles fetch cycles, WebSockets, background service workers, and client cache persistence.</p>
+                    <span class="layout-note">Grid Cell (Row 2, Col 1 - Preserves Column Width)</span>
+                </article>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <p>&copy; 2026 Aarman Arzare. Programming for Web Development - I Laboratory (Practical 13: Choosing Between Flexbox & Grid).</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

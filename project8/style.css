@@ -1,0 +1,356 @@
+/* =========================================================
+   PRACTICAL 8: STICKY NAVBAR & CARD OVERLAY POSITIONING
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* 1. STICKY NAVBAR */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.logo-icon {
+    color: #2563eb;
+    font-size: 1.4rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* Content Container */
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+}
+
+/* Intro Hero */
+.intro-hero {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 48px;
+    margin-bottom: 48px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.intro-hero h1 {
+    font-size: 2.25rem;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.intro-hero p {
+    color: #64748b;
+    font-size: 1.1rem;
+    max-width: 780px;
+}
+
+.intro-hero code {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+
+/* Section Titles */
+.section-title {
+    margin-bottom: 28px;
+}
+
+.section-title h2 {
+    font-size: 1.75rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.section-title p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+/* 2. CARD OVERLAY POSITIONING */
+.cards-section {
+    margin-bottom: 60px;
+}
+
+.card-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+/* Relative Container for Card */
+.interactive-card {
+    flex: 1 1 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.12);
+}
+
+.card-visual {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    position: relative;
+}
+
+.visual-blue {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.visual-emerald {
+    background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+}
+
+.visual-purple {
+    background: linear-gradient(135deg, #4c1d95 0%, #8b5cf6 100%);
+}
+
+.card-tag {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    align-self: center;
+    color: #ffffff;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-body h3 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.card-summary {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Absolute Positioned Overlay */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.95);
+    color: #ffffff;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 10;
+}
+
+.interactive-card:hover .card-overlay {
+    transform: translateY(0%);
+}
+
+.overlay-badge {
+    display: inline-block;
+    color: #38bdf8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.overlay-content h4 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.overlay-content p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.overlay-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.overlay-features li {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.overlay-features li::before {
+    content: "✓";
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.overlay-btn {
+    display: inline-block;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.overlay-btn:hover {
+    background-color: #7dd3fc;
+}
+
+/* Details Section */
+.details-section {
+    margin-bottom: 60px;
+}
+
+.detail-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.detail-box h3 {
+    font-size: 1.15rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.detail-box p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+.detail-box code {
+    background-color: #f1f5f9;
+    color: #2563eb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+/* Footer */
+.page-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 24px;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .intro-hero {
+        padding: 28px;
+    }
+}

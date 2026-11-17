@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 12: Advanced CSS Grid Bento Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="portfolio-container">
+        
+        <header class="grid-header">
+            <span class="sub-heading">ENGINEERING SHOWCASE</span>
+            <h1>Selected Architectural Works</h1>
+            <p class="description">An asymmetric Bento-style project grid demonstrating explicit track coordinates, multi-span cells, and responsive layout re-orchestration with advanced CSS Grid.</p>
+        </header>
+
+        <div class="bento-grid">
+
+            <!-- Card 1: Featured Flagship (Spans 2 cols, 2 rows) -->
+            <article class="bento-card card-featured">
+                <div class="card-top">
+                    <span class="project-tag tag-primary">01 / DISTRIBUTED COMPUTING</span>
+                    <span class="status-live">&#9679; PRODUCTION READY</span>
+                </div>
+                <div class="card-content">
+                    <h2>AetherNet Distributed Edge Fabric</h2>
+                    <p>High-throughput decentralized edge compute orchestration layer. Routes asynchronous compute payloads across distributed nodes with sub-50ms regional consensus and real-time telemetry streaming.</p>
+                    <ul class="tech-pills">
+                        <li>Rust</li>
+                        <li>TypeScript</li>
+                        <li>WebSockets</li>
+                        <li>gRPC</li>
+                    </ul>
+                </div>
+                <div class="card-bottom">
+                    <span class="card-indicator">Primary Engineering Initiative &rarr;</span>
+                </div>
+            </article>
+
+            <!-- Card 2: Top Right (1 col, 1 row) -->
+            <article class="bento-card card-design">
+                <div class="card-top">
+                    <span class="project-tag tag-accent">02 / UI ARCHITECTURE</span>
+                </div>
+                <div class="card-content">
+                    <h2>OmniFlow Design System</h2>
+                    <p>Accessible, token-driven web component library with zero-runtime CSS-in-JS abstractions.</p>
+                    <ul class="tech-pills">
+                        <li>CSS Tokens</li>
+                        <li>Web Components</li>
+                    </ul>
+                </div>
+                <div class="card-bottom">
+                    <span class="card-indicator">Documentation &rarr;</span>
+                </div>
+            </article>
+
+            <!-- Card 3: Middle Right (1 col, 1 row) -->
+            <article class="bento-card card-security">
+                <div class="card-top">
+                    <span class="project-tag tag-emerald">03 / SECURITY PROTOCOLS</span>
+                </div>
+                <div class="card-content">
+                    <h2>VaultZero Cryptographic Auth</h2>
+                    <p>Zero-knowledge biometric passkey authentication SDK eliminating server-side credential storage.</p>
+                    <ul class="tech-pills">
+                        <li>WebAuthn</li>
+                        <li>ZK-Proofs</li>
+                    </ul>
+                </div>
+                <div class="card-bottom">
+                    <span class="card-indicator">Security Audit &rarr;</span>
+                </div>
+            </article>
+
+            <!-- Card 4: Bottom Left (1 col, 1 row) -->
+            <article class="bento-card card-ai">
+                <div class="card-top">
+                    <span class="project-tag tag-amber">04 / MACHINE INTELLIGENCE</span>
+                </div>
+                <div class="card-content">
+                    <h2>LogStream Anomaly Engine</h2>
+                    <p>Streaming log analysis daemon isolating infrastructure degradation patterns before failure cascades.</p>
+                    <ul class="tech-pills">
+                        <li>Python</li>
+                        <li>Vector Search</li>
+                    </ul>
+                </div>
+                <div class="card-bottom">
+                    <span class="card-indicator">Inspect Models &rarr;</span>
+                </div>
+            </article>
+
+            <!-- Card 5: Bottom Wide (2 cols, 1 row) -->
+            <article class="bento-card card-analytics">
+                <div class="card-top">
+                    <span class="project-tag tag-cyan">05 / DEVELOPER TOOLING</span>
+                    <span class="status-beta">COMMUNITY EDITION</span>
+                </div>
+                <div class="card-content">
+                    <h2>DevPulse Repository Intelligence</h2>
+                    <p>Developer velocity analytics platform aggregating Git commit rhythms, pull request review latency, and test suite health across multi-repository organizations.</p>
+                    <ul class="tech-pills">
+                        <li>Go</li>
+                        <li>PostgreSQL</li>
+                        <li>Next.js</li>
+                        <li>Tailwind</li>
+                    </ul>
+                </div>
+                <div class="card-bottom">
+                    <span class="card-indicator">Explore Analytics Suite &rarr;</span>
+                </div>
+            </article>
+
+        </div>
+
+        <footer class="grid-footer">
+            <p>&copy; 2026 Aarman Arzare. Programming for Web Development - I Lab (Practical 12: Advanced CSS Grid).</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

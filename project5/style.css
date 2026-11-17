@@ -1,0 +1,177 @@
+/* Reset & Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #f8fafc;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.brand h1 {
+    font-size: 1.8rem;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+}
+
+.brand .tagline {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.navbar {
+    display: flex;
+    gap: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+}
+
+/* Main Content Layout with Flexbox */
+.main-content {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* Aside / Sidebar Styling */
+.sidebar {
+    flex: 0 0 32%;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h2 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.skill-category {
+    margin-bottom: 18px;
+}
+
+.skill-category h3 {
+    font-size: 1rem;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar li {
+    padding: 6px 10px;
+    margin-bottom: 6px;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #475569;
+    border-left: 3px solid #60a5fa;
+}
+
+/* Bio Section & Articles */
+.bio-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bio-card {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.bio-card h2 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.bio-card p {
+    color: #334155;
+    margin-bottom: 12px;
+}
+
+.bio-card p:last-child {
+    margin-bottom: 0;
+}
+
+.bio-card ul {
+    padding-left: 20px;
+    color: #334155;
+}
+
+.bio-card li {
+    margin-bottom: 6px;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.9rem;
+    color: #64748b;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .main-content {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex: 1 1 100%;
+    }
+}

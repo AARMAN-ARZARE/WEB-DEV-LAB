@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 9: Responsive Navbar & Card Grid Using Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Responsive Flexbox Navbar -->
+    <header class="navbar-wrapper">
+        <div class="navbar-container">
+            <div class="nav-brand">
+                <span class="brand-badge">P9</span>
+                <span class="brand-text">Aarman Arzare</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#modules">Lab Modules</a>
+                <a href="#resources">Resources</a>
+                <a href="#portal" class="nav-cta">Student Portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content with Flexbox Grid -->
+    <main class="page-main">
+
+        <section class="intro-section" id="curriculum">
+            <span class="section-tag">Flexbox Layout Architecture</span>
+            <h1>Responsive Flexbox Navbar & Adaptive Card Grid</h1>
+            <p>Demonstrating fluid multi-row card distributions using <code>display: flex</code>, <code>flex-wrap: wrap</code>, and flexible growth/shrink ratios (<code>flex: 1 1 260px</code>) without CSS Grid.</p>
+        </section>
+
+        <!-- Flexbox Card Grid -->
+        <section class="cards-section" id="modules">
+            <div class="flex-grid">
+
+                <!-- Card 1 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 01</div>
+                    <div class="card-icon">&#128187;</div>
+                    <h3>Terminal Navigation</h3>
+                    <p>Mastering Unix CLI navigation, directory manipulation, path verification, and file permissions.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 1</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 01</div>
+                    <div class="card-icon">&#9874;</div>
+                    <h3>Git Initial Commit</h3>
+                    <p>Repository initialization, staging architecture, commit hashing, and upstream remote binding.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 2</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 01</div>
+                    <div class="card-icon">&#127807;</div>
+                    <h3>Branching Workflows</h3>
+                    <p>Feature isolation, git checkout strategies, branch merging, and collaborative GitHub pull requests.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 3</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 01</div>
+                    <div class="card-icon">&#127991;</div>
+                    <h3>README & SemVer</h3>
+                    <p>Comprehensive technical documentation, semantic version tagging, and milestone release publishing.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 4</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 02</div>
+                    <div class="card-icon">&#128196;</div>
+                    <h3>Semantic HTML5</h3>
+                    <p>Structuring accessible, SEO-friendly documents using native semantic tags and accessible landmarks.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 5</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 02</div>
+                    <div class="card-icon">&#127912;</div>
+                    <h3>Design Tokens</h3>
+                    <p>Centralized CSS custom properties managing typographic scales, color spaces, and spatial cadences.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 7</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 7 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 02</div>
+                    <div class="card-icon">&#128204;</div>
+                    <h3>CSS Positioning</h3>
+                    <p>Sticky navigation bars, fixed toolbars, and absolute overlays layered within relative containers.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 8</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Card 8 -->
+                <article class="flex-card">
+                    <div class="card-chip">Module 03</div>
+                    <div class="card-icon">&#9638;</div>
+                    <h3>CSS Grid Systems</h3>
+                    <p>Two-dimensional layout orchestration, newspaper column flows, and bento portfolio grids.</p>
+                    <div class="card-footer">
+                        <span class="card-meta">Practical 12</span>
+                        <a href="#" class="card-link">Review &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>&copy; 2026 Aarman Arzare. Built with CSS Flexbox Layouts.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 8: Sticky Navbar & Card Overlay Positioning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">&#9670;</span>
+                <span class="logo-title">DevCraft UI</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#cards">Interactive Cards</a>
+                <a href="#details">CSS Mechanics</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content Container -->
+    <div class="content-wrapper">
+
+        <!-- Intro Hero -->
+        <section class="intro-hero" id="overview">
+            <span class="hero-badge">CSS Positioning Mastery</span>
+            <h1>Sticky Navbar & Card Overlay Mechanics</h1>
+            <p>Explore real-world CSS positioning behaviors: <code>position: sticky</code> for viewport-clinging headers and <code>position: absolute</code> layered within <code>position: relative</code> containers for smooth interactive overlays.</p>
+        </section>
+
+        <!-- Interactive Cards Grid with Positioning Overlays -->
+        <section class="cards-section" id="cards">
+            <div class="section-title">
+                <h2>Featured Project Showcase</h2>
+                <p>Hover over each card to trigger the absolute-positioned overlay slide effect.</p>
+            </div>
+
+            <div class="card-grid">
+
+                <!-- Card 1 -->
+                <article class="interactive-card">
+                    <div class="card-visual visual-blue">
+                        <span class="card-tag">Full Stack</span>
+                        <div class="card-icon">&#128187;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>PulseCloud Engine</h3>
+                        <p class="card-summary">Scalable metrics collector and observability dashboard.</p>
+                    </div>
+                    <!-- CSS Positioned Absolute Overlay -->
+                    <div class="card-overlay">
+                        <div class="overlay-content">
+                            <span class="overlay-badge">System Architecture</span>
+                            <h4>PulseCloud Core</h4>
+                            <p>Processes real-time server telemetry using low-overhead asynchronous workers and timeseries visualizers.</p>
+                            <ul class="overlay-features">
+                                <li>Distributed Ingestion</li>
+                                <li>Sub-millisecond Latency</li>
+                                <li>WebSockets Alerting</li>
+                            </ul>
+                            <a href="#" class="overlay-btn">Explore Engine &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="interactive-card">
+                    <div class="card-visual visual-emerald">
+                        <span class="card-tag">AI Systems</span>
+                        <div class="card-icon">&#9881;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>AgentFlow Studio</h3>
+                        <p class="card-summary">Visual pipeline designer for autonomous LLM agent graphs.</p>
+                    </div>
+                    <!-- CSS Positioned Absolute Overlay -->
+                    <div class="card-overlay">
+                        <div class="overlay-content">
+                            <span class="overlay-badge">Agentic Workflows</span>
+                            <h4>AgentFlow Studio</h4>
+                            <p>Enables declarative orchestration of multi-agent coordination with real-time state inspection and tool routing.</p>
+                            <ul class="overlay-features">
+                                <li>Graph DAG Execution</li>
+                                <li>Memory Sandboxes</li>
+                                <li>Tool Schema Registry</li>
+                            </ul>
+                            <a href="#" class="overlay-btn">Launch Studio &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="interactive-card">
+                    <div class="card-visual visual-purple">
+                        <span class="card-tag">Security</span>
+                        <div class="card-icon">&#128274;</div>
+                    </div>
+                    <div class="card-body">
+                        <h3>VaultZero Auth</h3>
+                        <p class="card-summary">Zero-knowledge identity and decentralized session management.</p>
+                    </div>
+                    <!-- CSS Positioned Absolute Overlay -->
+                    <div class="card-overlay">
+                        <div class="overlay-content">
+                            <span class="overlay-badge">Cryptography</span>
+                            <h4>VaultZero Security</h4>
+                            <p>Client-side cryptographic key generation with biometric passkey authentication and ephemeral access tokens.</p>
+                            <ul class="overlay-features">
+                                <li>WebAuthn Passkeys</li>
+                                <li>ZK Proof Verification</li>
+                                <li>End-to-End Encryption</li>
+                            </ul>
+                            <a href="#" class="overlay-btn">Inspect Protocol &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Deep Dive Explanation Section (adds scroll height to verify sticky navbar) -->
+        <section class="details-section" id="details">
+            <div class="section-title">
+                <h2>Technical Implementation Summary</h2>
+                <p>Key positioning concepts demonstrated in this practical.</p>
+            </div>
+            <div class="detail-cards">
+                <div class="detail-box">
+                    <h3>1. Position: Sticky Mechanics</h3>
+                    <p>The header stays in normal document flow until the viewport scrolls past its threshold (<code>top: 0</code>). It then docks to the viewport top, supported by <code>z-index: 100</code> to stay above all layered content.</p>
+                </div>
+                <div class="detail-box">
+                    <h3>2. Position: Relative & Absolute Overlays</h3>
+                    <p>The card container specifies <code>position: relative</code>, forming the containing coordinate context. The <code>.card-overlay</code> uses <code>position: absolute; inset: 0;</code> and smooth CSS <code>transform: translateY(100%)</code> to animate effortlessly into view.</p>
+                </div>
+                <div class="detail-box">
+                    <h3>3. Stacking Context & Hardware Acceleration</h3>
+                    <p>By constraining overlays within <code>overflow: hidden</code> and animating transform properties, the browser leverages GPU compositing layers for 60fps animations without document reflow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="page-footer" id="contact">
+            <p>&copy; 2026 Aarman Arzare. Programming for Web Development - I Lab.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

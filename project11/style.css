@@ -1,0 +1,284 @@
+/* =========================================================
+   PRACTICAL 11: NEWSPAPER-STYLE THREE-COLUMN CSS GRID
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f7f6f2;
+    color: #1a1a1a;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    line-height: 1.55;
+    padding: 30px 16px;
+}
+
+.newspaper-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 36px 44px;
+    border: 1px solid #dcdad1;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* 1. MASTHEAD HEADER */
+.masthead {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.masthead-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1a1a1a;
+    color: #4b5563;
+}
+
+.edition {
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #111827;
+}
+
+.newspaper-title {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin: 14px 0 10px;
+    text-transform: uppercase;
+    font-family: "Playfair Display", Georgia, serif;
+}
+
+.masthead-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-style: italic;
+    padding: 8px 0;
+    border-top: 3px double #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
+    color: #374151;
+}
+
+.price {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* 2. LEAD BANNER HEADLINE */
+.lead-banner {
+    text-align: center;
+    padding: 24px 20px 28px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 28px;
+}
+
+.headline-kicker {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #b91c1c;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-headline {
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.headline-sub {
+    font-size: 1.15rem;
+    color: #4b5563;
+    font-style: italic;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* 3. NEWSPAPER CSS GRID CONTAINER */
+.newspaper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 36px;
+}
+
+.news-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-one, .column-two {
+    border-right: 1px solid #cbd5e1;
+    padding-right: 28px;
+}
+
+.column-topic {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.article-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.byline {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 6px;
+}
+
+.author {
+    font-weight: 600;
+    color: #111827;
+}
+
+.news-column p {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    color: #1f2937;
+}
+
+.dropcap-p::first-letter {
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.82;
+    margin: 4px 8px 0 0;
+    font-weight: 800;
+    color: #111827;
+    font-family: Georgia, serif;
+}
+
+.pull-quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #111827;
+    border-top: 2px solid #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
+    padding: 16px 8px;
+    margin: 18px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.infobox {
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-left: 4px solid #1f2937;
+    padding: 14px 16px;
+    margin-top: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.infobox h5 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.infobox ul {
+    list-style-type: square;
+    padding-left: 18px;
+    font-size: 0.85rem;
+    color: #374151;
+}
+
+.infobox li {
+    margin-bottom: 4px;
+}
+
+.article-divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 16px 0;
+}
+
+.sub-article-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.newspaper-footer {
+    text-align: center;
+}
+
+.footer-rule {
+    border-top: 1px solid #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.newspaper-footer p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+@media (max-width: 900px) {
+    .newspaper-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .column-two {
+        border-right: none;
+        padding-right: 0;
+    }
+    .column-three {
+        grid-column: span 2;
+        border-top: 1px solid #cbd5e1;
+        padding-top: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .newspaper-page {
+        padding: 20px 18px;
+    }
+    .masthead-top, .masthead-bottom {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .newspaper-grid {
+        grid-template-columns: 1fr;
+    }
+    .column-one, .column-two, .column-three {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #cbd5e1;
+        padding-bottom: 24px;
+    }
+    .column-three {
+        border-bottom: none;
+        grid-column: span 1;
+    }
+}
